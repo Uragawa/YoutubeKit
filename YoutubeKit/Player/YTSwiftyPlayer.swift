@@ -77,7 +77,7 @@ open class YTSwiftyPlayer: WKWebView {
         super.init(frame: frame, configuration: config)
         
         callbackHandlers.forEach {
-            userContentController.add(self, name: $0.rawValue)
+            userContentController.add(WeakHandler(self), name: $0.rawValue)
         }
         
         commonInit()
@@ -93,7 +93,7 @@ open class YTSwiftyPlayer: WKWebView {
         super.init(frame: frame, configuration: config)
 
         callbackHandlers.forEach {
-            userContentController.add(self, name: $0.rawValue)
+            userContentController.add(WeakHandler(self), name: $0.rawValue)
         }
 
         commonInit()

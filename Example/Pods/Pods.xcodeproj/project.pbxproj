@@ -91,6 +91,7 @@
 		EC9D63FDDA9B91A86D5ABB28FBB18A83 /* YTSwiftyConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = B8BC572317E7FABA746089CBEED3B4DC /* YTSwiftyConstants.swift */; };
 		F4C6A01F3FB69A87963F886963B2DAEC /* Statistics.swift in Sources */ = {isa = PBXBuildFile; fileRef = AA1A38E3D2DE576118863ADAEDE75543 /* Statistics.swift */; };
 		F4E3E24B17EEF1E16BE89BC813C92663 /* VideoList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 43CD78A123BC600829F6AE4469E0CB9C /* VideoList.swift */; };
+		FA8F1DD3231443F60070E828 /* WeakHandler.swift in Sources */ = {isa = PBXBuildFile; fileRef = FA8F1DD1231443E40070E828 /* WeakHandler.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -218,6 +219,7 @@
 		F5CC5BF3ED01CF642EC8536F38CC1444 /* ChannelSectionsList.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ChannelSectionsList.swift; sourceTree = "<group>"; };
 		F66A4731F69342A6F5F03DFB31221009 /* YTSwiftyPlayer.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = YTSwiftyPlayer.swift; sourceTree = "<group>"; };
 		F6F59D1D086635F945747F315E45271F /* Pods-YoutubeKit_Tests.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = "Pods-YoutubeKit_Tests.modulemap"; sourceTree = "<group>"; };
+		FA8F1DD1231443E40070E828 /* WeakHandler.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WeakHandler.swift; sourceTree = "<group>"; };
 		FBF8819955C0080DDD86119F24F8B571 /* Pods_YoutubeKit_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_YoutubeKit_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -474,6 +476,7 @@
 		E3C512B5083964FBB7A1D0C303BC6AC1 /* Player */ = {
 			isa = PBXGroup;
 			children = (
+				FA8F1DD1231443E40070E828 /* WeakHandler.swift */,
 				B8BC572317E7FABA746089CBEED3B4DC /* YTSwiftyConstants.swift */,
 				F66A4731F69342A6F5F03DFB31221009 /* YTSwiftyPlayer.swift */,
 				AA01861650BFC08526A23D3A02E1FD0F /* YTSwiftyPlayerDelegate.swift */,
@@ -619,6 +622,9 @@
 				LastSwiftUpdateCheck = 0930;
 				LastUpgradeCheck = 0930;
 				TargetAttributes = {
+					4EE4C2A155CD79301EFCC6296C83ACCA = {
+						LastSwiftMigration = 1030;
+					};
 					60C299AB2D2300EB8FB28819F5C40AED = {
 						LastSwiftMigration = 1020;
 					};
@@ -707,6 +713,7 @@
 				BD8695EA17B88646A993A731487E7DA3 /* HTTPMethod.swift in Sources */,
 				B6E3E71DCEF25C29C211A4FC84C61D45 /* I18nLanguagesList.swift in Sources */,
 				E006DD37666B92D118884667C85779C3 /* I18nLanguagesListRequest.swift in Sources */,
+				FA8F1DD3231443F60070E828 /* WeakHandler.swift in Sources */,
 				E6CD08A7606EFE244AC4194CC41ED023 /* I18nRegionsList.swift in Sources */,
 				19366605D0DD3D90DC431D5BF1F82703 /* I18nRegionsListRequest.swift in Sources */,
 				10EAEE1C88342579A3897AD80106830A /* Localized.swift in Sources */,
@@ -949,6 +956,7 @@
 			baseConfigurationReference = 3039A53FC5369370F654CD74528DEEFC /* Pods-YoutubeKit_Example.release.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -971,6 +979,7 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VALIDATE_PRODUCT = YES;
 				VERSIONING_SYSTEM = "apple-generic";
@@ -1016,6 +1025,7 @@
 			baseConfigurationReference = BF7FC9E991EC5C6ACFF44E9A1DD1DD60 /* Pods-YoutubeKit_Example.debug.xcconfig */;
 			buildSettings = {
 				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = NO;
+				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_IDENTITY = "";
 				"CODE_SIGN_IDENTITY[sdk=appletvos*]" = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "";
@@ -1038,6 +1048,8 @@
 				PRODUCT_NAME = "$(TARGET_NAME:c99extidentifier)";
 				SDKROOT = iphoneos;
 				SKIP_INSTALL = YES;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 				VERSIONING_SYSTEM = "apple-generic";
 				VERSION_INFO_PREFIX = "";
